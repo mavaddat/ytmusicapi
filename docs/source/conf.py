@@ -12,17 +12,18 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, '../..')
+
+sys.path.insert(0, os.path.abspath("."))
+sys.path.insert(0, "../..")
 from ytmusicapi import __version__  # noqa: E402
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 
 # -- Project information -----------------------------------------------------
 
-project = 'ytmusicapi'
-copyright = '2022, sigma67'
-author = 'sigma67'
+project = "ytmusicapi"
+copyright = "2022, sigma67"
+author = "sigma67"
 
 # The full version, including alpha/beta/rc tags
 version = __version__
@@ -37,34 +38,17 @@ release = __version__
 extensions = ["sphinx.ext.autodoc"]
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = ".rst"
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-# -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-if not on_rtd:
-    # Try to use the ReadTheDocs theme if installed.
-    # Default to the default alabaster theme if not.
-    try:
-        import sphinx_rtd_theme
-        html_theme = 'sphinx_rtd_theme'
-        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    except ImportError:
-        html_theme = 'alabaster'
-else:
-    # Set theme to 'default' for ReadTheDocs.
-    html_theme = 'default'
-
+html_theme = "sphinx_rtd_theme"
